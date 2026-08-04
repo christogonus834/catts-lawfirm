@@ -35,6 +35,28 @@ img.real-photo{width:100%; height:100%; object-fit:cover; display:block;}
 .utility-bar .date{color:#b5b0a0;}
 .utility-bar nav a{color:#e8e4d8; margin-left:16px; font-size:11px; text-transform:uppercase;}
 
+/* Google Translate widget — override its default styling to fit the dark utility bar */
+.translate-widget{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.translate-widget .goog-te-gadget{
+  color:#e8e4d8 !important;
+  font-size:11px !important;
+}
+.translate-widget .goog-te-gadget-simple{
+  background:transparent !important;
+  border:1px solid #4a4a4a !important;
+  border-radius:3px;
+  padding:2px 6px !important;
+}
+.translate-widget .goog-te-gadget-simple .goog-te-menu-value span{
+  color:#e8e4d8 !important;
+}
+.translate-widget img{vertical-align:middle;}
+/* Hide the "powered by Google" banner Google injects at the top of the page on select */
+.goog-te-banner-frame{display:none !important;}
+body{top:0 !important;}
+
 /* Masthead */
 .masthead{
   border-bottom:3px solid var(--rule);

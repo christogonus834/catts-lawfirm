@@ -3,22 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World — Catts-Lawfirm</title>
+<title>World — Catts-lawfirm</title>
 <link rel="stylesheet" href="styles.css">
-</head>
+</head> 
 <body>
   <div class="utility-bar">
     <div class="wrap">
       <span class="date">Monday, August 3, 2026</span>
-      <nav>
-        <a href="#">Sign In</a>
-        <a href="#">Subscribe</a>
-      </nav>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div id="google_translate_element" class="translate-widget"></div>
+        <nav>
+          <a href="#">Sign In</a>
+          <a href="#">Subscribe</a>
+        </nav>
+      </div>
     </div>
   </div>
   <header class="masthead">
     <div class="wrap">
-      <h1><a href="index.html">The Daily Ledger</a></h1>
+      <h1><a href="index.html">Catts Lawfirm</a></h1>
       <div class="tagline">Business &amp; Markets, Every Morning</div>
     </div>
   </header>
@@ -170,8 +173,19 @@
       <div class="footer-links">
         <a href="#">About</a> · <a href="#">Contact</a> · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Advertise</a>
       </div>
-      © 2026  Publication. All rights reserved.
+      © 2026 Catts Lawfirm. All rights reserved.
     </div>
   </footer>
+
+  <!-- Google Website Translator widget — swap for your preferred translation service if needed -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
