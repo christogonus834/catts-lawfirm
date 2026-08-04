@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dispute Resolution — Continental Attorneys</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="catt">
+  <div class="utility-bar">
+    <div class="wrap">
+      <span class="date">A Registered Partnership Law Firm</span>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div class="lang-toggle">
+          <button type="button" class="active-lang" onclick="setCattLanguage('en')">EN</button>
+          <button type="button" onclick="setCattLanguage('zh-CN')">&#20013;&#25991;</button>
+        </div>
+        <div id="google_translate_element"></div>
+        <nav>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="brand-lockup">
+        <img src="assets/catt-logo.jpg" alt="Continental Attorneys logo">
+        <span class="brand-name">Continental Attorneys</span>
+        <span class="brand-tagline">A Registered Partnership Law Firm</span>
+      </a>
+    </div>
+  </header>
+  <nav class="primary-nav">
+    <div class="wrap">
+      <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="commercial-practice.html" class="">Commercial Practice</a></li>
+        <li><a href="dispute-resolution.html" class="active">Dispute Resolution</a></li>
+        <li><a href="corporate-practice.html" class="">Corporate Practice</a></li>
+        <li><a href="foreign-investment.html" class="">Foreign Investment &amp; Trade</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="practice-hero-img"><img src="assets/blue-abstract.jpg" alt="Strategic resolution"></div>
+  <main class="wrap">
+    <div class="section-header"><h2>Dispute Resolution</h2></div>
+    <p class="practice-intro">Our primary objective is always to secure a speedy resolution of disputes by understanding our client's particular interest and exploring avenues for an amicable settlement before litigation.</p>
+      <div class="practice-block">
+        <h3>Litigation</h3>
+        <p>In the event of litigation, we offer comprehensive services from the High Court through to the Supreme Court. CATT handles civil actions ranging from intricate commercial matters to personal cases. Our immense knowledge and experience in this area provides us with the undoubted ability to gain comparative advantage for our clients by responding swiftly and efficiently to secure or defend interim protective measures.</p>
+        <p>Through strategic thinking, application of procedural tactics and an in-depth analysis of our client and the adversary's case, we are often able to achieve our client's commercial interest whilst minimizing legal, commercial and reputational risks. Our aim is always to bring disputes to an early and successful conclusion.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Arbitration &amp; ADR</h3>
+        <p>In view of the historically slow pace of litigation in Nigeria, Arbitration and alternative dispute resolution are favoured means of dispute resolution. CATT has been very active in representing clients in regard to disputes arising from various commercial transactions, including intellectual property, joint venture and shareholder agreements, labor and employment, construction contracts, sale of goods and product liability. Our lawyers also advise on drafting arbitration and dispute resolution mechanisms, and have been selected to serve as arbitrators in a wide variety of arbitrations under the UNCITRAL and other arbitration rules.</p>
+      </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Continental Attorneys</strong> &middot; A Registered Partnership Law Firm
+      <div class="footer-links">
+        Abuja &middot; Abeokuta &middot; South Africa &middot;
+        <a href="mailto:continentalattorneysllp@gmail.com">continentalattorneysllp@gmail.com</a>
+      </div>
+      © 2026 Continental Attorneys. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Google Website Translator — powers the EN / 中文 buttons above -->
+  <div style="display:none;">
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,zh-CN', autoDisplay: false },
+          'google_translate_element'
+        );
+      }
+      function setCattLanguage(lang) {
+        var expiry = new Date();
+        expiry.setTime(expiry.getTime() + (30*24*60*60*1000));
+        var value = (lang === 'en') ? '/en/en' : ('/en/' + lang);
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/';
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/; domain=' + location.hostname;
+        location.reload();
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</body>
+</html>

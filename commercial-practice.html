@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commercial Practice — Continental Attorneys</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="catt">
+  <div class="utility-bar">
+    <div class="wrap">
+      <span class="date">A Registered Partnership Law Firm</span>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div class="lang-toggle">
+          <button type="button" class="active-lang" onclick="setCattLanguage('en')">EN</button>
+          <button type="button" onclick="setCattLanguage('zh-CN')">&#20013;&#25991;</button>
+        </div>
+        <div id="google_translate_element"></div>
+        <nav>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="brand-lockup">
+        <img src="assets/catt-logo.jpg" alt="Continental Attorneys logo">
+        <span class="brand-name">Continental Attorneys</span>
+        <span class="brand-tagline">A Registered Partnership Law Firm</span>
+      </a>
+    </div>
+  </header>
+  <nav class="primary-nav">
+    <div class="wrap">
+      <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="commercial-practice.html" class="active">Commercial Practice</a></li>
+        <li><a href="dispute-resolution.html" class="">Dispute Resolution</a></li>
+        <li><a href="corporate-practice.html" class="">Corporate Practice</a></li>
+        <li><a href="foreign-investment.html" class="">Foreign Investment &amp; Trade</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="practice-hero-img"><img src="assets/circuit-board.jpg" alt="Technology and intellectual property"></div>
+  <main class="wrap">
+    <div class="section-header"><h2>Commercial Practice</h2></div>
+      <div class="practice-block">
+        <h3>Banking &amp; Insurance</h3>
+        <p>Our Practice is structured to respond to the specific needs of banks and insurance companies in Nigeria's dynamic financial markets. CATT provides full advisory and litigation services in the more traditional areas of banking and insurance law, regulation of financial institutions, credit facilities documentation and loan syndications. Our clients in this area include the top banks and insurance companies and premier financial institutions.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Corporate Governance &amp; Secretarial Services</h3>
+        <p>We have established a core group of practitioners that are committed to helping companies develop written corporate codes of conduct and to adhere to Corporate Governance best practices. We also provide the full range of Company Secretarial services and guarantee corporate compliance and 'good standing' &mdash; simply and efficiently.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Employment</h3>
+        <p>CATT advises employers on all aspects of employment law &mdash; dispute resolution and advisory. On the dispute resolution side, our work often involves defending corporate clients against unfair dismissal claims and representing our clients in union and labour relations matters. On the advisory side, our employment practitioners render a wide range of services in compliance with Nigerian law including: drafting employment contracts for executives and senior management; staff handbooks and regulation; design and implementation of employee benefit schemes.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Construction and Real Estate</h3>
+        <p>CATT advises project sponsors, contractors and other industry players. We provide efficient and insightful solutions based on a good appreciation of the commercial forces and legal aspects shaping construction projects. Aside from the traditional conveyance, leasing, and perfection of titles and mortgages, we offer advice on structured property joint ventures, finance and project management issues for housing estates and sizeable construction projects. Our lawyers have extensive experience negotiating building contracts and advising on the popular FIDIC and ICE standard form contracts.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Intellectual Property</h3>
+        <p>Our focus in this field is to help clients protect their business by protecting their intellectual rights and brand name. CATT's experience covers a variety of industries including pharmaceutical, information technology, electronics, and consumer goods and entertainment. We have been engaged in structuring, negotiating and preparing various agreements for the transfer of technology, international franchising and exploitation of intellectual property rights by licensing and joint venture schemes. We handle trademark, design and patent filings along with opposition proceedings, and are swift to enforce clients' IP rights.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Taxation</h3>
+        <p>Nigeria's tax regime operates on federal, state and local government levels, with many grey areas and multiple taxation issues. CATT's tax group provides advice on all aspects of corporate and personal tax matters. Our practice is a mixture of non-contentious and contentious work, and our clients range from manufacturing companies to multi-nationals to financial institutions. We have developed particular expertise in our primary strength sectors, namely Oil and Gas, Construction &amp; Real Estate and Financial Products. On the contentious side, we engage in all aspects of tax litigation, leveraging our experience to ensure a successful challenge to unfair tax assessments.</p>
+      </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Continental Attorneys</strong> &middot; A Registered Partnership Law Firm
+      <div class="footer-links">
+        Abuja &middot; Abeokuta &middot; South Africa &middot;
+        <a href="mailto:continentalattorneysllp@gmail.com">continentalattorneysllp@gmail.com</a>
+      </div>
+      © 2026 Continental Attorneys. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Google Website Translator — powers the EN / 中文 buttons above -->
+  <div style="display:none;">
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,zh-CN', autoDisplay: false },
+          'google_translate_element'
+        );
+      }
+      function setCattLanguage(lang) {
+        var expiry = new Date();
+        expiry.setTime(expiry.getTime() + (30*24*60*60*1000));
+        var value = (lang === 'en') ? '/en/en' : ('/en/' + lang);
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/';
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/; domain=' + location.hostname;
+        location.reload();
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</body>
+</html>

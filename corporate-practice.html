@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Practice — Continental Attorneys</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="catt">
+  <div class="utility-bar">
+    <div class="wrap">
+      <span class="date">A Registered Partnership Law Firm</span>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div class="lang-toggle">
+          <button type="button" class="active-lang" onclick="setCattLanguage('en')">EN</button>
+          <button type="button" onclick="setCattLanguage('zh-CN')">&#20013;&#25991;</button>
+        </div>
+        <div id="google_translate_element"></div>
+        <nav>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="brand-lockup">
+        <img src="assets/catt-logo.jpg" alt="Continental Attorneys logo">
+        <span class="brand-name">Continental Attorneys</span>
+        <span class="brand-tagline">A Registered Partnership Law Firm</span>
+      </a>
+    </div>
+  </header>
+  <nav class="primary-nav">
+    <div class="wrap">
+      <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="commercial-practice.html" class="">Commercial Practice</a></li>
+        <li><a href="dispute-resolution.html" class="">Dispute Resolution</a></li>
+        <li><a href="corporate-practice.html" class="active">Corporate Practice</a></li>
+        <li><a href="foreign-investment.html" class="">Foreign Investment &amp; Trade</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="practice-hero-img"><img src="assets/team-desk.jpg" alt="Corporate strategy and planning"></div>
+  <main class="wrap">
+    <div class="section-header"><h2>Corporate Practice</h2></div>
+    <p class="practice-intro">Clients need to be sure that they can pursue their objectives with the minimum of hitches or risks. Continental Attorneys ensure that deals, no matter how complex, are closed efficiently and successfully. Our commercial mindset and proven expertise is the recipe that always ensures success.</p>
+      <div class="practice-block">
+        <h3>Capital Markets</h3>
+        <p>Raising capital is a significant move for any organization. From the decision to raise capital through to the landmark period of deciding to list, and through the daunting planning and execution stages, our Capital Markets practitioners are a resource base at our client's disposal, forging a close working relationship to achieve success. Our transaction profile includes advising on rights issues, public offers, private placements, complex debt instruments and securitizations. We also assist with compliance with regulations of the Nigerian Stock Exchange and the Securities and Exchange Commission.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Mergers &amp; Acquisitions</h3>
+        <p>CATT has positioned itself to provide its clients with quality advice at all stages of a merger or acquisition transaction. We have been active in this area from the era of consolidation (of subsidiary companies of conglomerates) to the more recent mergers arising from regulatory reforms &mdash; particularly in the banking and insurance sectors. We support our clients from strategy and planning, through the due diligence and documentation phase, all the way to post-transaction integration.</p>
+      </div>
+      <div class="practice-block">
+        <h3>Corporate Restructuring and Insolvency</h3>
+        <p>In times of financial difficulty, our financial restructuring and insolvency group has expertise in giving critical advice on debt restructuring and out-of-court workouts. We are regularly instructed on procedures ranging from administrations and liquidations through to company voluntary arrangements and receiverships. We also act on insolvency-related matters for banks and other secured lenders, creditors and receivers, in addition to acting on business and asset acquisitions from distressed companies to help minimize the attendant risks.</p>
+      </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Continental Attorneys</strong> &middot; A Registered Partnership Law Firm
+      <div class="footer-links">
+        Abuja &middot; Abeokuta &middot; South Africa &middot;
+        <a href="mailto:continentalattorneysllp@gmail.com">continentalattorneysllp@gmail.com</a>
+      </div>
+      © 2026 Continental Attorneys. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Google Website Translator — powers the EN / 中文 buttons above -->
+  <div style="display:none;">
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,zh-CN', autoDisplay: false },
+          'google_translate_element'
+        );
+      }
+      function setCattLanguage(lang) {
+        var expiry = new Date();
+        expiry.setTime(expiry.getTime() + (30*24*60*60*1000));
+        var value = (lang === 'en') ? '/en/en' : ('/en/' + lang);
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/';
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/; domain=' + location.hostname;
+        location.reload();
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</body>
+</html>

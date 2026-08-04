@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Continental Attorneys</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="catt">
+  <div class="utility-bar">
+    <div class="wrap">
+      <span class="date">A Registered Partnership Law Firm</span>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div class="lang-toggle">
+          <button type="button" class="active-lang" onclick="setCattLanguage('en')">EN</button>
+          <button type="button" onclick="setCattLanguage('zh-CN')">&#20013;&#25991;</button>
+        </div>
+        <div id="google_translate_element"></div>
+        <nav>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="index.html" class="brand-lockup">
+        <img src="assets/catt-logo.jpg" alt="Continental Attorneys logo">
+        <span class="brand-name">Continental Attorneys</span>
+        <span class="brand-tagline">A Registered Partnership Law Firm</span>
+      </a>
+    </div>
+  </header>
+  <nav class="primary-nav">
+    <div class="wrap">
+      <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="commercial-practice.html" class="">Commercial Practice</a></li>
+        <li><a href="dispute-resolution.html" class="">Dispute Resolution</a></li>
+        <li><a href="corporate-practice.html" class="">Corporate Practice</a></li>
+        <li><a href="foreign-investment.html" class="">Foreign Investment &amp; Trade</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="wrap">
+    <div class="section-header"><h2>Contact Us</h2></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Abuja</h4>
+        <p>Suite CS 7, Harmonic Plaza,<br>Off Mike Aighbe Way,<br>Abuja, Nigeria.</p>
+      </div>
+      <div class="contact-card">
+        <h4>Abeokuta</h4>
+        <p>23/24 Atiku/Obasanjo Way,<br>Ita Eko, Abeokuta,<br>Ogun State, Nigeria.</p>
+      </div>
+      <div class="contact-card">
+        <h4>South Africa</h4>
+        <p>15, St. Helena Taylor Road,<br>Honeybridge, Johannesburg-2040,<br>South Africa.</p>
+      </div>
+    </div>
+    <div class="contact-card" style="margin-bottom:40px;">
+      <h4>Get in Touch</h4>
+      <p>Email: <a href="mailto:continentalattorneysllp@gmail.com">continentalattorneysllp@gmail.com</a><br>
+      Mobile: (+234) 81-6331-3942, 0803-648-2333</p>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Continental Attorneys</strong> &middot; A Registered Partnership Law Firm
+      <div class="footer-links">
+        Abuja &middot; Abeokuta &middot; South Africa &middot;
+        <a href="mailto:continentalattorneysllp@gmail.com">continentalattorneysllp@gmail.com</a>
+      </div>
+      © 2026 Continental Attorneys. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Google Website Translator — powers the EN / 中文 buttons above -->
+  <div style="display:none;">
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,zh-CN', autoDisplay: false },
+          'google_translate_element'
+        );
+      }
+      function setCattLanguage(lang) {
+        var expiry = new Date();
+        expiry.setTime(expiry.getTime() + (30*24*60*60*1000));
+        var value = (lang === 'en') ? '/en/en' : ('/en/' + lang);
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/';
+        document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/; domain=' + location.hostname;
+        location.reload();
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</body>
+</html>
