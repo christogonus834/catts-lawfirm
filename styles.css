@@ -298,25 +298,60 @@ body.catt{
 .catt footer{border-top:3px solid var(--catt-gold); background:var(--catt-navy); color:#cfd4e0;}
 .catt footer a{color:#cfd4e0;}
 
-/* language toggle buttons */
-.lang-toggle{display:flex; gap:0; font-family:Arial,sans-serif; font-size:11px;}
-.lang-toggle button{
+/* language dropdown (Quinn Emanuel style) */
+.lang-dropdown{position:relative; font-family:Arial,sans-serif; font-size:12px;}
+.lang-current{
   background:transparent; border:1px solid #4a5a86; color:#cfd4e0;
-  padding:4px 10px; cursor:pointer; letter-spacing:0.04em;
+  padding:5px 12px; cursor:pointer; letter-spacing:0.05em; display:flex; align-items:center; gap:7px;
+  text-transform:uppercase; font-weight:700; border-radius:3px;
 }
-.lang-toggle button:first-child{border-radius:3px 0 0 3px;}
-.lang-toggle button:last-child{border-radius:0 3px 3px 0; border-left:none;}
-.lang-toggle button.active-lang{background:var(--catt-gold); color:var(--catt-navy); border-color:var(--catt-gold); font-weight:700;}
+.lang-current .caret{font-size:10px; transition:transform 0.15s ease;}
+.lang-current.menu-open .caret{transform:rotate(180deg);}
+.lang-menu{
+  display:none; position:absolute; top:130%; right:0; background:var(--catt-navy-soft);
+  border:1px solid var(--catt-gold); min-width:130px; z-index:60; flex-direction:column;
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+}
+.lang-menu.open{display:flex;}
+.lang-menu a{padding:10px 16px; color:#fff; text-decoration:none; font-size:13px; border-bottom:1px solid rgba(255,255,255,0.08);}
+.lang-menu a:last-child{border-bottom:none;}
+.lang-menu a:hover{background:var(--catt-gold); color:var(--catt-navy); text-decoration:none;}
 #google_translate_element{display:none;}
 
-/* Hero on homepage */
-.catt-hero{
-  background:linear-gradient(135deg, var(--catt-navy), var(--catt-navy-soft));
-  color:#fff; padding:56px 0; text-align:center; margin-bottom:0;
+/* Homepage hero image slider */
+.catt-hero-slider{
+  position:relative; height:440px; overflow:hidden; background:var(--catt-navy);
 }
-.catt-hero img.hero-logo{height:100px; margin-bottom:16px;}
-.catt-hero h1{font-size:34px; font-weight:400; letter-spacing:0.03em; margin-bottom:8px;}
-.catt-hero p{font-family:Arial,sans-serif; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--catt-gold-light);}
+.catt-hero-slider .slide{
+  position:absolute; inset:0; opacity:0; animation:heroFade 30s infinite;
+}
+.catt-hero-slider .slide img{width:100%; height:100%; object-fit:cover; display:block;}
+.catt-hero-slider .slide::after{
+  content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,61,0.55), rgba(13,27,61,0.75));
+}
+.catt-hero-slider .slide:nth-child(1){animation-delay:0s;}
+.catt-hero-slider .slide:nth-child(2){animation-delay:6s;}
+.catt-hero-slider .slide:nth-child(3){animation-delay:12s;}
+.catt-hero-slider .slide:nth-child(4){animation-delay:18s;}
+.catt-hero-slider .slide:nth-child(5){animation-delay:24s;}
+@keyframes heroFade{
+  0%{opacity:0;}
+  4%{opacity:1;}
+  18%{opacity:1;}
+  24%{opacity:0;}
+  100%{opacity:0;}
+}
+.catt-hero-slider .hero-copy{
+  position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; text-align:center; color:#fff; padding:0 20px;
+}
+.catt-hero-slider .hero-copy img.hero-logo{height:88px; margin-bottom:18px;}
+.catt-hero-slider .hero-copy h1{font-size:36px; font-weight:400; letter-spacing:0.03em; margin-bottom:10px;}
+.catt-hero-slider .hero-copy p{font-family:Arial,sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--catt-gold-light);}
+@media (max-width:640px){
+  .catt-hero-slider{height:360px;}
+  .catt-hero-slider .hero-copy h1{font-size:26px;}
+}
 
 /* Practice area landing cards on home */
 .practice-cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding:40px 0;}

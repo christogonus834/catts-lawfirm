@@ -11,9 +11,14 @@
     <div class="wrap">
       <span class="date">A Registered Partnership Law Firm</span>
       <div style="display:flex; align-items:center; gap:16px;">
-        <div class="lang-toggle">
-          <button type="button" class="active-lang" onclick="setCattLanguage('en')">EN</button>
-          <button type="button" onclick="setCattLanguage('zh-CN')">&#20013;&#25991;</button>
+        <div class="lang-dropdown">
+          <button type="button" class="lang-current" onclick="toggleLangMenu(this)">ENG <span class="caret">&#9662;</span></button>
+          <div class="lang-menu">
+            <a href="#" onclick="setCattLanguage('en'); return false;">ENG</a>
+            <a href="#" onclick="setCattLanguage('zh-CN'); return false;">中文</a>
+            <a href="#" onclick="setCattLanguage('ko'); return false;">한국어</a>
+            <a href="#" onclick="setCattLanguage('ja'); return false;">日本語</a>
+          </div>
         </div>
         <div id="google_translate_element"></div>
         <nav>
@@ -77,12 +82,12 @@
     </div>
   </footer>
 
-  <!-- Google Website Translator — powers the EN / 中文 buttons above -->
+  <!-- Google Website Translator — powers the language dropdown above -->
   <div style="display:none;">
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-          { pageLanguage: 'en', includedLanguages: 'en,zh-CN', autoDisplay: false },
+          { pageLanguage: 'en', includedLanguages: 'en,zh-CN,ko,ja', autoDisplay: false },
           'google_translate_element'
         );
       }
@@ -94,6 +99,19 @@
         document.cookie = 'googtrans=' + value + '; expires=' + expiry.toUTCString() + '; path=/; domain=' + location.hostname;
         location.reload();
       }
+      function toggleLangMenu(btn) {
+        var menu = btn.nextElementSibling;
+        menu.classList.toggle('open');
+        btn.classList.toggle('menu-open');
+      }
+      document.addEventListener('click', function(e) {
+        document.querySelectorAll('.lang-menu.open').forEach(function(menu) {
+          if (!menu.parentElement.contains(e.target)) {
+            menu.classList.remove('open');
+            menu.parentElement.querySelector('.lang-current').classList.remove('menu-open');
+          }
+        });
+      });
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </div>
